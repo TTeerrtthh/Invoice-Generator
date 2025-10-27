@@ -4,9 +4,14 @@ A clean, production-minded invoice generator built with the MERN stack.
 
 This project generates server-side PDF invoices (PDFKit), can email them to clients using Nodemailer (Ethereal fallback for development), and includes a responsive React + Vite frontend. It supports JWT-based authentication and per-user invoice isolation.
 
-Demo / Screenshot
+<img width="813" height="887" alt="1_ip" src="https://github.com/user-attachments/assets/a65c22c2-5df2-43bc-b77b-5f9653aa8a5a" />
 
-> Add screenshots to `client/src/assets/` and they will render on the repo page. Example files used during development: `invoice_reference_match.pdf`, `invoice_big_test.pdf` (in `backend/`).
+
+<img width="888" height="836" alt="2_ip" src="https://github.com/user-attachments/assets/08629bfb-8f46-4db0-9955-d6a57154cb92" />
+
+
+<img width="1461" height="877" alt="3_ip" src="https://github.com/user-attachments/assets/2e087d09-e3fc-4423-8994-12c7d1498ecf" />
+
 
 Features
 
