@@ -1,0 +1,46 @@
+/* App wide styles inspired by the provided screenshot */
+:root{
+	--bg:#f4f4f6;
+	--card:#ffffff;
+	--accent:#222;
+	--muted:#6b7280;
+	--button:#2563eb;
+	--button-text:#fff;
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+	margin:0;
+	font-family: 'Segoe UI', Roboto, system-ui, -apple-system, 'Helvetica Neue', Arial;
+	background:var(--bg);
+	color:var(--accent);
+}
+.container{
+	max-width:900px;
+	margin:36px auto;
+	background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.9));
+	padding:28px;
+	border-radius:8px;
+	box-shadow:0 8px 30px rgba(0,0,0,0.08);
+}
+h1{font-size:48px;margin:0 0 18px}
+h2{font-size:28px;margin:18px 0}
+form label{display:block;margin:8px 0;font-weight:600}
+input[type="text"], input[type="date"], input[type="number"]{
+	padding:8px 10px;border:1px solid #d1d5db;border-radius:4px;width:100%;max-width:420px;
+}
+.row{display:flex;gap:12px;align-items:center}
+.items-row{display:flex;gap:8px;margin-top:8px}
+.btn{background:var(--button);color:var(--button-text);border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+.btn.secondary{background:#e5e7eb;color:#111}
+.invoice-list{margin-top:18px}
+.invoice-item{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #eef2f7}
+.invoice-item .meta{color:var(--muted)}
+.download-btn{background:#111;color:#fff;padding:6px 10px;border-radius:6px;border:none}
+.totals{font-weight:700}
+.items-table{width:100%;margin-top:8px;border-collapse:collapse}
+.items-table td{padding:6px 8px;border:1px solid #eee}
+
+@media(max-width:600px){
+	.row{flex-direction:column}
+}
