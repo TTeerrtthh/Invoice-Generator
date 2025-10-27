@@ -33,6 +33,79 @@ Tech stack
 - PDF: PDFKit
 - Email: Nodemailer (Ethereal fallback)
 
+Follow these copy-pasteable PowerShell steps to run the project on another Windows machine.
+
+1) Clone the repository
+
+```powershell
+cd $env:USERPROFILE\Desktop
+git clone https://github.com/TTeerrtthh/Invoice-Generator.git
+cd Invoice-Generator
+```
+
+2) Backend: install deps and create `.env`
+
+```powershell
+cd .\backend
+npm install
+@'
+MONGO_URI=mongodb://localhost:27017/invoice_generator
+JWT_SECRET=super_long_secret_here
+CLIENT_URL=http://localhost:5173
+# Optional SMTP for real email delivery:
+# SMTP_HOST=smtp.example.com
+# SMTP_PORT=587
+# SMTP_USER=your_smtp_user
+# SMTP_PASS=your_smtp_pass
+# EMAIL_FROM="Your Company <no-reply@example.com>"
+'@ > .env
+```
+
+Notes: replace `MONGO_URI` with your Atlas URI if using MongoDB Atlas. Keep `JWT_SECRET` private.
+
+3) Frontend: install deps
+
+```powershell
+cd ..\frontend
+npm install
+```
+
+4) Start backend
+
+```powershell
+cd ..\backend
+npm run dev
+```
+
+You should see logs like "MongoDB connected" and the server listening on port 5000.
+
+5) Start frontend
+
+```powershell
+cd ..\frontend
+npm run dev
+```
+
+Open http://localhost:5173 in your browser.
+
+6) Create a user and test
+
+- Use the Signup page in the UI to create a user and log in.
+- Create an invoice, then use Download to get the PDF or Email to send (Ethereal preview in dev).
+
+7) Optional: generate sample PDF from backend
+
+```powershell
+cd ..\backend
+node create_sample_invoice.js
+# or test large invoices:
+node tmp_big_invoice.js
+```
+
+8) Optional: add fonts for ₹ rendering
+
+- Copy TTF fonts (e.g., Noto Sans) to `backend/fonts/` and restart the backend to have the rupee glyph render correctly.
+
 Quick start (development)
 
 1) Backend
