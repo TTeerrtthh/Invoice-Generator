@@ -7,10 +7,13 @@ This project generates server-side PDF invoices (PDFKit), can email them to clie
 <img width="813" height="887" alt="1_ip" src="https://github.com/user-attachments/assets/a65c22c2-5df2-43bc-b77b-5f9653aa8a5a" />
 
 
+
 <img width="888" height="836" alt="2_ip" src="https://github.com/user-attachments/assets/08629bfb-8f46-4db0-9955-d6a57154cb92" />
 
 
+
 <img width="1461" height="877" alt="3_ip" src="https://github.com/user-attachments/assets/2e087d09-e3fc-4423-8994-12c7d1498ecf" />
+
 
 
 Features
